@@ -6,11 +6,11 @@ const presets = [
   {
     name: "Preset Pack 1",
     description:
-      "My signature cinematic edit — warm tones, lifted shadows, and rich detail. Built for portrait and lifestyle photography.",
+      "Bring your warm pictures to life. Silky cinematic shine to make your photos pop. Edit like a boss.",
     price: "£3",
     tag: "Available now",
     priceId: "price_1TbNjD35QywjBrcA11jgPKLY",
-    before: "/pp1.jpg",
+    before: "/p4.jpg",
   },
 ];
 
