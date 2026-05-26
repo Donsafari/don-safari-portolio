@@ -551,12 +551,12 @@ export default function Portfolio() {
       </div>
 
       {/* Category filter */}
-      <div className="flex flex-wrap justify-center gap-2 mb-12">
+      <div className="flex overflow-x-auto pb-2 justify-start sm:justify-center gap-2 mb-12 scrollbar-hide">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setActive(cat)}
-            className={`px-5 py-2 text-xs tracking-widest uppercase transition-all duration-200 ${
+            className={`flex-shrink-0 px-5 py-2 text-xs tracking-widest uppercase transition-all duration-200 ${
               active === cat
                 ? "bg-amber-200 text-stone-950 font-medium"
                 : "border border-stone-700 text-stone-400 hover:border-amber-200 hover:text-amber-200"
@@ -567,17 +567,17 @@ export default function Portfolio() {
         ))}
       </div>
 
-      {/* Masonry-style grid */}
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+      {/* Stable grid */}
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
         {filtered.map((shot) => (
           <div
             key={shot.id}
-            className="break-inside-avoid group relative overflow-hidden bg-stone-900 cursor-pointer"
+            className="group relative overflow-hidden bg-stone-900 cursor-pointer aspect-[3/4]"
           >
             <img
               src={shot.src}
               alt={shot.alt}
-              className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-stone-950/0 group-hover:bg-stone-950/40 transition-all duration-300 flex items-end p-5">
