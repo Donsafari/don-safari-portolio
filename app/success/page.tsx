@@ -9,12 +9,19 @@ export default function SuccessPage() {
           Thank you!
         </h1>
         <p className="text-stone-400 font-light leading-relaxed mb-8">
-          Your preset pack has been purchased successfully. Check your email for
-          your download link.
+          Your preset pack has been purchased successfully. Click below to
+          download your preset.
         </p>
         <a
+          href="https://drive.google.com/uc?export=download&id=1cOrdfY5PFFlUvXacYbq1Y1MyK_lrrNcj"
+          className="inline-block px-8 py-3.5 bg-amber-200 text-stone-950 text-sm font-medium tracking-widest uppercase hover:bg-amber-100 transition-colors duration-200 mb-4"
+        >
+          Download Preset
+        </a>
+        <br />
+        <a
           href="/"
-          className="inline-block px-8 py-3.5 bg-amber-200 text-stone-950 text-sm font-medium tracking-widest uppercase hover:bg-amber-100 transition-colors duration-200"
+          className="inline-block mt-4 text-stone-500 text-sm hover:text-stone-300 transition-colors duration-200"
         >
           Back to Site
         </a>
