@@ -4,12 +4,28 @@ import { useState } from "react";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // TODO: wire up to a form backend (e.g. Resend, Formspree, or EmailJS)
-    setSubmitted(true);
+    setLoading(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch {
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -87,9 +103,10 @@ export default function Contact() {
           </div>
           <button
             type="submit"
-            className="w-full py-3.5 bg-amber-200 text-stone-950 text-sm font-medium tracking-widest uppercase hover:bg-amber-100 transition-colors duration-200"
+            disabled={loading}
+            className="w-full py-3.5 bg-amber-200 text-stone-950 text-sm font-medium tracking-widest uppercase hover:bg-amber-100 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Send Message
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       )}
