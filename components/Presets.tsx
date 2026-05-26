@@ -19,13 +19,23 @@ export default function Presets() {
 
   async function handleBuy(priceId: string) {
     setLoading(priceId);
-    const res = await fetch("/api/checkout", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ priceId }),
-    });
-    const { url } = await res.json();
-    window.location.href = url;
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ priceId }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        alert("Something went wrong. Please try again.");
+        setLoading(null);
+      }
+    } catch {
+      alert("Something went wrong. Please try again.");
+      setLoading(null);
+    }
   }
 
   return (
