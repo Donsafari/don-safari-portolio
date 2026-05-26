@@ -21,6 +21,15 @@ const presets = [
     priceId: "price_1TbSif35QywjBrcAxrL8jbyX",
     before: "/l2.jpg",
   },
+  {
+    name: "Donsafari Preset 3",
+    description:
+      "Classy with a little editorial grit. Make your photos fresh off film.",
+    price: "£3",
+    tag: "Available now",
+    priceId: "price_1TbSyR35QywjBrcAt2zdEUVs",
+    before: "/p1.jpg",
+  },
 ];
 
 export default function Presets() {

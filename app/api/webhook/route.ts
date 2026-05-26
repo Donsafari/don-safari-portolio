@@ -13,6 +13,10 @@ const presetDownloads: Record<string, { name: string; url: string }> = {
     name: "Donsafari Preset 2",
     url: "https://drive.google.com/uc?export=download&id=1oqaH60H-idzhpuGoTz7Ecbj4VDEYrVPF",
   },
+  price_1TbSyR35QywjBrcAt2zdEUVs: {
+    name: "Donsafari Preset 3",
+    url: "https://drive.google.com/uc?export=download&id=1IHhrwxWhr1s71V0ht6PifMn0GgTqb5Yc",
+  },
 };
 
 export async function POST(req: NextRequest) {
