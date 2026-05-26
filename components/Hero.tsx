@@ -26,6 +26,12 @@ export default function Hero() {
             View Portfolio
           </a>
           <a
+            href="#presets"
+            className="inline-block px-8 py-3.5 bg-amber-200 text-stone-950 text-sm font-medium tracking-widest uppercase hover:bg-amber-100 transition-colors duration-200"
+          >
+            Shop Presets
+          </a>
+          <a
             href="#contact"
             className="inline-block px-8 py-3.5 border border-stone-600 text-stone-300 text-sm font-medium tracking-widest uppercase hover:border-amber-200 hover:text-[#c2603a] transition-colors duration-200"
           >
