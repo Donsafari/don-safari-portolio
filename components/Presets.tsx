@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const presets = [
   {
@@ -77,10 +78,12 @@ export default function Presets() {
             className="group bg-stone-900/60 border border-stone-800 hover:border-amber-200/40 transition-colors duration-300 flex flex-col"
           >
             <div className="aspect-[4/5] overflow-hidden relative">
-              <img
+              <Image
                 src={preset.before}
                 alt={`${preset.name} preview`}
-                className="w-full h-full object-cover transition-all duration-700"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="object-cover transition-all duration-700"
               />
               {preset.tag && (
                 <span className="absolute top-3 left-3 bg-amber-200 text-stone-950 text-[10px] font-medium tracking-widest uppercase px-2 py-1">

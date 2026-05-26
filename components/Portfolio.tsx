@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const categories = ["All", "Portraits", "Gym", "Live Music", "Travel", "Weddings"];
 
@@ -574,10 +575,12 @@ export default function Portfolio() {
             key={shot.id}
             className="group relative overflow-hidden bg-stone-900 cursor-pointer aspect-[3/4]"
           >
-            <img
+            <Image
               src={shot.src}
               alt={shot.alt}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              fill
+              sizes="(max-width: 768px) 50vw, 33vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-stone-950/0 group-hover:bg-stone-950/40 transition-all duration-300 flex items-end p-5">

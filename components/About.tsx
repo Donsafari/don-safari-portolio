@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const stats = [
   { value: "6+", label: "Years of experience" },
   { value: "100+", label: "Sessions completed" },
@@ -14,10 +16,13 @@ export default function About() {
         {/* Photo placeholder */}
         <div className="relative">
           <div className="aspect-[3/4] bg-stone-800 overflow-hidden">
-            <img
+            <Image
               src="/pp1.jpg"
               alt="Photographer at work"
-              className="w-full h-full object-cover"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              priority
             />
           </div>
           {/* Accent frame */}
