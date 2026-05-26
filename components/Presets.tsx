@@ -66,8 +66,7 @@ export default function Presets() {
           Lightroom Presets
         </h2>
         <p className="text-stone-400 font-light max-w-md mx-auto">
-          Bring my signature edit to your own work. One-click presets built for
-          portrait and lifestyle photography.
+          Bring my signature edit to your own work. One-click presets.
         </p>
       </div>
 
