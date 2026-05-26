@@ -10,13 +10,13 @@ export async function POST(req: NextRequest) {
       payment_method_types: ["card"],
       line_items: [{ price: priceId, quantity: 1 }],
       mode: "payment",
-      success_url: `${req.headers.get("origin")}/success`,
+      success_url: `${req.headers.get("origin")}/success?preset=${priceId}`,
       cancel_url: `${req.headers.get("origin")}/#presets`,
     });
 
     return NextResponse.json({ url: session.url });
   } catch (error) {
-    console.error("Stripe error:", error);
+    console.error("Stripe error:", JSON.stringify(error));
     return NextResponse.json({ error: "Checkout failed" }, { status: 500 });
   }
 }
