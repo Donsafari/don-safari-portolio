@@ -12,6 +12,15 @@ const presets = [
     priceId: "price_1TbNjD35QywjBrcA11jgPKLY",
     before: "/p4.jpg",
   },
+  {
+    name: "Donsafari Preset 2",
+    description:
+      "Feeling cyberpunk? Bring out the neons, darks and bright colours.",
+    price: "£3",
+    tag: "Available now",
+    priceId: "price_1TbSif35QywjBrcAxrL8jbyX",
+    before: "/l2.jpg",
+  },
 ];
 
 export default function Presets() {
