@@ -13,18 +13,6 @@ export default function Footer() {
           >
             Instagram
           </a>
-          <a
-            href="#"
-            className="hover:text-amber-200 tracking-wide transition-colors uppercase"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="#"
-            className="hover:text-amber-200 tracking-wide transition-colors uppercase"
-          >
-            VSCO
-          </a>
         </div>
       </div>
     </footer>
