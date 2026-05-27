@@ -99,13 +99,6 @@ const shots = [
     aspect: "portrait",
   },
   {
-    id: 114,
-    category: "Portraits",
-    src: "/p14.jpg",
-    alt: "Portrait 14",
-    aspect: "portrait",
-  },
-  {
     id: 115,
     category: "Portraits",
     src: "/p15.jpg",
