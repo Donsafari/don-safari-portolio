@@ -3,8 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Donsafari — Portrait Photographer",
-  description:
-    "Portrait and people photography. Capturing authentic moments and timeless stories.",
+  description: "Quietly Cinematic.",
 };
 
 export default function RootLayout({
