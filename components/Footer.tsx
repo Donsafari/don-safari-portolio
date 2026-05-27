@@ -5,15 +5,26 @@ export default function Footer() {
         <p className="font-serif text-stone-500">Donsafari</p>
         <p>© {new Date().getFullYear()} — All rights reserved</p>
         <div className="flex gap-6">
-          {["Instagram", "LinkedIn", "VSCO"].map((platform) => (
-            <a
-              key={platform}
-              href="#"
-              className="hover:text-amber-200 tracking-wide transition-colors uppercase"
-            >
-              {platform}
-            </a>
-          ))}
+          <a
+            href="https://www.instagram.com/Donsafari__"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-amber-200 tracking-wide transition-colors uppercase"
+          >
+            Instagram
+          </a>
+          <a
+            href="#"
+            className="hover:text-amber-200 tracking-wide transition-colors uppercase"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="#"
+            className="hover:text-amber-200 tracking-wide transition-colors uppercase"
+          >
+            VSCO
+          </a>
         </div>
       </div>
     </footer>
