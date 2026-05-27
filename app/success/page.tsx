@@ -7,7 +7,7 @@ const presetDownloads: Record<string, { name: string; url: string }> = {
     name: "Donsafari Preset 2",
     url: "https://drive.google.com/uc?export=download&id=1oqaH60H-idzhpuGoTz7Ecbj4VDEYrVPF",
   },
-  price_1Tbmlg35QywjBrcA60sXIhEg: {
+  price_1TbnCy35QywjBrcAHv9KuEZJ: {
     name: "Donsafari Preset 3",
     url: "https://drive.google.com/uc?export=download&id=1IHhrwxWhr1s71V0ht6PifMn0GgTqb5Yc",
   },
