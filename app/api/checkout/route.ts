@@ -7,7 +7,7 @@ export async function POST(req: NextRequest) {
     const { priceId } = await req.json();
 
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
+      automatic_payment_methods: { enabled: true },
       line_items: [{ price: priceId, quantity: 1 }],
       mode: "payment",
       success_url: `${req.headers.get("origin")}/success?preset=${priceId}`,
