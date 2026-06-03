@@ -5,6 +5,15 @@ import Image from "next/image";
 
 const presets = [
   {
+    name: "The Donsafari Collection",
+    description:
+      "All 3 presets plus the full Donsafari Editing Guide. Everything you need to shoot and edit like a pro.",
+    price: "£10",
+    tag: "Best value",
+    priceId: "price_1TeIfT35QywjBrcAyMUCsfNw",
+    before: "/p100.jpg",
+  },
+  {
     name: "Preset Pack 1",
     description:
       "Bring your warm pictures to life. Silky cinematic shine to make your photos pop. Edit like a boss.",
@@ -30,15 +39,6 @@ const presets = [
     tag: "",
     priceId: "price_1TeIa135QywjBrcAmnq5LoWp",
     before: "/p1.jpg",
-  },
-  {
-    name: "The Donsafari Collection",
-    description:
-      "All 3 presets plus the full Donsafari Editing Guide. Everything you need to shoot and edit like a pro.",
-    price: "£10",
-    tag: "Best value",
-    priceId: "price_1TeIfT35QywjBrcAyMUCsfNw",
-    before: "/p100.jpg",
   },
 ];
 
