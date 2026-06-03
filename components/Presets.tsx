@@ -38,7 +38,7 @@ const presets = [
     price: "£10",
     tag: "Best value",
     priceId: "price_1TeIfT35QywjBrcAyMUCsfNw",
-    before: "/p4.jpg",
+    before: "/p100.jpg",
   },
 ];
 
