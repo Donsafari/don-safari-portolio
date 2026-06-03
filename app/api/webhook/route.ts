@@ -4,18 +4,30 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const presetDownloads: Record<string, { name: string; url: string }> = {
+type DownloadItem = { name: string; url: string };
+type PresetDownload = { name: string; items: DownloadItem[] };
+
+const presetDownloads: Record<string, PresetDownload> = {
   price_1TeIde35QywjBrcAXQ4AYIOD: {
     name: "Preset Pack 1",
-    url: "https://drive.google.com/uc?export=download&id=1cOrdfY5PFFlUvXacYbq1Y1MyK_lrrNcj",
+    items: [{ name: "Preset Pack 1", url: "https://drive.google.com/uc?export=download&id=1cOrdfY5PFFlUvXacYbq1Y1MyK_lrrNcj" }],
   },
   price_1TeId735QywjBrcAS5PT8h3d: {
     name: "Donsafari Preset 2",
-    url: "https://drive.google.com/uc?export=download&id=1oqaH60H-idzhpuGoTz7Ecbj4VDEYrVPF",
+    items: [{ name: "Donsafari Preset 2", url: "https://drive.google.com/uc?export=download&id=1oqaH60H-idzhpuGoTz7Ecbj4VDEYrVPF" }],
   },
   price_1TeIa135QywjBrcAmnq5LoWp: {
     name: "Donsafari Preset 3",
-    url: "https://drive.google.com/uc?export=download&id=1IHhrwxWhr1s71V0ht6PifMn0GgTqb5Yc",
+    items: [{ name: "Donsafari Preset 3", url: "https://drive.google.com/uc?export=download&id=1IHhrwxWhr1s71V0ht6PifMn0GgTqb5Yc" }],
+  },
+  price_1TeIfT35QywjBrcAyMUCsfNw: {
+    name: "The Donsafari Collection",
+    items: [
+      { name: "Preset Pack 1", url: "https://drive.google.com/uc?export=download&id=1cOrdfY5PFFlUvXacYbq1Y1MyK_lrrNcj" },
+      { name: "Donsafari Preset 2", url: "https://drive.google.com/uc?export=download&id=1oqaH60H-idzhpuGoTz7Ecbj4VDEYrVPF" },
+      { name: "Donsafari Preset 3", url: "https://drive.google.com/uc?export=download&id=1IHhrwxWhr1s71V0ht6PifMn0GgTqb5Yc" },
+      { name: "Editing Guide PDF", url: "https://drive.google.com/uc?export=download&id=16ay_pXHqoIuaUlmTkcuIByqDpaBdMqWc" },
+    ],
   },
 };
 
@@ -45,6 +57,13 @@ export async function POST(req: NextRequest) {
     const download = priceId ? presetDownloads[priceId] : null;
 
     if (customerEmail && download) {
+      const downloadLinks = download.items.map(item => `
+        <a href="${item.url}"
+           style="display: inline-block; background: #e5c97e; color: #0c0a09; padding: 14px 28px; text-decoration: none; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; font-family: sans-serif; margin-bottom: 12px; width: 100%; box-sizing: border-box; text-align: center;">
+          Download ${item.name}
+        </a>
+      `).join("");
+
       await resend.emails.send({
         from: "Donsafari <presets@donsafari.com>",
         to: customerEmail,
@@ -53,12 +72,9 @@ export async function POST(req: NextRequest) {
           <div style="font-family: Georgia, serif; max-width: 560px; margin: 0 auto; background: #0c0a09; color: #f5f0eb; padding: 40px 32px;">
             <h1 style="font-size: 28px; color: #e5c97e; margin-bottom: 8px;">Thank you for your purchase!</h1>
             <p style="color: #a8a29e; font-size: 15px; margin-bottom: 24px;">Your ${download.name} is ready to download.</p>
-            <a href="${download.url}"
-               style="display: inline-block; background: #e5c97e; color: #0c0a09; padding: 14px 28px; text-decoration: none; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; font-family: sans-serif; margin-bottom: 32px;">
-              Download ${download.name}
-            </a>
-            <p style="color: #78716c; font-size: 13px; line-height: 1.6;">
-              Once downloaded, unzip the file and drop the .xmp file into your Lightroom presets folder.<br/><br/>
+            ${downloadLinks}
+            <p style="color: #78716c; font-size: 13px; line-height: 1.6; margin-top: 24px;">
+              Once downloaded, unzip the files and drop the .xmp files into your Lightroom presets folder.<br/><br/>
               Any questions? Reply to this email and I'll help you out.
             </p>
             <p style="color: #57534e; font-size: 12px; margin-top: 32px;">— Donsafari</p>

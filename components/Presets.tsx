@@ -31,6 +31,15 @@ const presets = [
     priceId: "price_1TeIa135QywjBrcAmnq5LoWp",
     before: "/p1.jpg",
   },
+  {
+    name: "The Donsafari Collection",
+    description:
+      "All 3 presets plus the full Donsafari Editing Guide. Everything you need to shoot and edit like a pro.",
+    price: "£10",
+    tag: "Best value",
+    priceId: "price_1TeIfT35QywjBrcAyMUCsfNw",
+    before: "/p4.jpg",
+  },
 ];
 
 export default function Presets() {
