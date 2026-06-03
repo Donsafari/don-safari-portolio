@@ -8,27 +8,27 @@ const presets = [
     name: "Preset Pack 1",
     description:
       "Bring your warm pictures to life. Silky cinematic shine to make your photos pop. Edit like a boss.",
-    price: "£3",
+    price: "£4",
     tag: "Available now",
-    priceId: "price_1TbNjD35QywjBrcA11jgPKLY",
+    priceId: "price_1TeIde35QywjBrcAXQ4AYIOD",
     before: "/p4.jpg",
   },
   {
     name: "Donsafari Preset 2",
     description:
       "Feeling cyberpunk? Bring out the neons, darks and bright colours.",
-    price: "£3",
+    price: "£4",
     tag: "Available now",
-    priceId: "price_1TbSif35QywjBrcAxrL8jbyX",
+    priceId: "price_1TeId735QywjBrcAS5PT8h3d",
     before: "/l2.jpg",
   },
   {
     name: "Donsafari Preset 3",
     description:
       "Classy with a little editorial grit. Make your photos fresh off film.",
-    price: "£3",
+    price: "£4",
     tag: "Available now",
-    priceId: "price_1TbnCy35QywjBrcAHv9KuEZJ",
+    priceId: "price_1TeIa135QywjBrcAmnq5LoWp",
     before: "/p1.jpg",
   },
 ];
