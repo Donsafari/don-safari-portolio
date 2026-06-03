@@ -9,7 +9,7 @@ const presets = [
     description:
       "Bring your warm pictures to life. Silky cinematic shine to make your photos pop. Edit like a boss.",
     price: "£4",
-    tag: "Available now",
+    tag: "",
     priceId: "price_1TeIde35QywjBrcAXQ4AYIOD",
     before: "/p4.jpg",
   },
@@ -18,7 +18,7 @@ const presets = [
     description:
       "Feeling cyberpunk? Bring out the neons, darks and bright colours.",
     price: "£4",
-    tag: "Available now",
+    tag: "",
     priceId: "price_1TeId735QywjBrcAS5PT8h3d",
     before: "/l2.jpg",
   },
@@ -27,7 +27,7 @@ const presets = [
     description:
       "Classy with a little editorial grit. Make your photos fresh off film.",
     price: "£4",
-    tag: "Available now",
+    tag: "",
     priceId: "price_1TeIa135QywjBrcAmnq5LoWp",
     before: "/p1.jpg",
   },
@@ -95,7 +95,11 @@ export default function Presets() {
                 className="object-cover transition-all duration-700"
               />
               {preset.tag && (
-                <span className="absolute top-3 left-3 bg-amber-200 text-stone-950 text-[10px] font-medium tracking-widest uppercase px-2 py-1">
+                <span className={`absolute top-3 left-3 uppercase font-bold tracking-widest ${
+                  preset.tag === "Best value"
+                    ? "bg-amber-400 text-stone-950 text-sm px-3 py-1.5 shadow-lg"
+                    : "bg-amber-200 text-stone-950 text-[10px] font-medium px-2 py-1"
+                }`}>
                   {preset.tag}
                 </span>
               )}
