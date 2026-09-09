@@ -16,7 +16,7 @@ const presets = [
   {
     name: "Donsafari Night Bundle",
     description:
-      "Night photography is tricky — streetlights turn everything orange, shadows crush to nothing, and grain can take over fast. This bundle is built to handle all of that.",
+      "Night photography is tricky, streetlights turn everything orange, shadows crush to nothing, and grain can take over fast. This bundle is built to handle all of that.",
     price: "£4.99",
     tag: "",
     priceId: "price_1UDouy35QywjBrcATECEVsVC",
