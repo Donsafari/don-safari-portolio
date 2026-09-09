@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Donsafari — Portrait Photographer",
-  description: "Quietly Cinematic.",
+  description: "Donsafari — London-based portrait, lifestyle and wedding photographer. Shop cinematic Lightroom presets and book a shoot.",
 };
 
 export default function RootLayout({
