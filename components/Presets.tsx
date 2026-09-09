@@ -68,7 +68,7 @@ export default function Presets() {
             key={preset.name}
             className="group bg-stone-900/60 border border-stone-800 hover:border-amber-200/40 transition-colors duration-300 flex flex-col"
           >
-            <div className="aspect-[4/5] overflow-hidden relative">
+            <div className="aspect-[2/3] overflow-hidden relative">
               <Image
                 src={preset.before}
                 alt={`${preset.name} preview`}
