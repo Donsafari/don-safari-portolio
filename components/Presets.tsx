@@ -7,7 +7,7 @@ const presets = [
   {
     name: "Donsafari Day Bundle",
     description:
-      "Golden hour but make it effortless. Warm tones, soft contrast, that proper filmic look — no faffing about in the edit. One tap and your feed's giving cinema.",
+      "Golden hour, but make it effortless. Warm tones, soft contrast. That proper cinema look. No faffing about in the edit. One tap. And that's cinema.",
     price: "£4.99",
     tag: "",
     priceId: "price_1UDoth35QywjBrcAEqwvqG9K",
