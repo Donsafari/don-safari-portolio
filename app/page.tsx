@@ -5,6 +5,7 @@ import About from "@/components/About";
 import Presets from "@/components/Presets";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import PresetBanner from "@/components/PresetBanner";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <PresetBanner />
     </>
   );
 }
