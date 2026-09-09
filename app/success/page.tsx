@@ -1,3 +1,5 @@
+import Confetti from "@/components/Confetti";
+
 type DownloadItem = { name: string; url: string };
 type PresetDownload = { name: string; items: DownloadItem[] };
 
@@ -22,6 +24,7 @@ export default async function SuccessPage({
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-stone-950 px-6">
+      <Confetti />
       <div className="text-center max-w-md">
         <p className="text-amber-200/70 tracking-[0.3em] uppercase text-xs mb-4">
           Order Confirmed
