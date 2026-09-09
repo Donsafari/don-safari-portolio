@@ -8,26 +8,13 @@ type DownloadItem = { name: string; url: string };
 type PresetDownload = { name: string; items: DownloadItem[] };
 
 const presetDownloads: Record<string, PresetDownload> = {
-  price_1TeIde35QywjBrcAXQ4AYIOD: {
-    name: "Preset Pack 1",
-    items: [{ name: "Preset Pack 1", url: "https://drive.google.com/uc?export=download&id=1cOrdfY5PFFlUvXacYbq1Y1MyK_lrrNcj" }],
+  price_1UDoth35QywjBrcAEqwvqG9K: {
+    name: "Donsafari Day Bundle",
+    items: [{ name: "Donsafari Day Bundle", url: "https://drive.google.com/uc?export=download&id=1h4NVqjmUioaVZhdcult3GnQTmm5Nt6XF" }],
   },
-  price_1TeId735QywjBrcAS5PT8h3d: {
-    name: "Donsafari Preset 2",
-    items: [{ name: "Donsafari Preset 2", url: "https://drive.google.com/uc?export=download&id=1oqaH60H-idzhpuGoTz7Ecbj4VDEYrVPF" }],
-  },
-  price_1TeIa135QywjBrcAmnq5LoWp: {
-    name: "Donsafari Preset 3",
-    items: [{ name: "Donsafari Preset 3", url: "https://drive.google.com/uc?export=download&id=1IHhrwxWhr1s71V0ht6PifMn0GgTqb5Yc" }],
-  },
-  price_1TeIfT35QywjBrcAyMUCsfNw: {
-    name: "The Donsafari Collection",
-    items: [
-      { name: "Preset Pack 1", url: "https://drive.google.com/uc?export=download&id=1cOrdfY5PFFlUvXacYbq1Y1MyK_lrrNcj" },
-      { name: "Donsafari Preset 2", url: "https://drive.google.com/uc?export=download&id=1oqaH60H-idzhpuGoTz7Ecbj4VDEYrVPF" },
-      { name: "Donsafari Preset 3", url: "https://drive.google.com/uc?export=download&id=1IHhrwxWhr1s71V0ht6PifMn0GgTqb5Yc" },
-      { name: "Editing Guide PDF", url: "https://drive.google.com/uc?export=download&id=16ay_pXHqoIuaUlmTkcuIByqDpaBdMqWc" },
-    ],
+  price_1UDouy35QywjBrcATECEVsVC: {
+    name: "Donsafari Night Bundle",
+    items: [{ name: "Donsafari Night Bundle", url: "https://drive.google.com/uc?export=download&id=1cboRJRiUgfJcm959QRzgUjvYgP0QO2VF" }],
   },
 };
 

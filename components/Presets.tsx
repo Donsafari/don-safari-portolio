@@ -5,40 +5,22 @@ import Image from "next/image";
 
 const presets = [
   {
-    name: "The Donsafari Collection",
+    name: "Donsafari Day Bundle",
     description:
-      "All 3 presets plus the full Donsafari Editing Guide. Everything you need to shoot and edit like a pro.",
-    price: "£10",
-    tag: "Best value",
-    priceId: "price_1TeIfT35QywjBrcAyMUCsfNw",
-    before: "/p100.jpg",
+      "Golden hour but make it effortless. Warm tones, soft contrast, that proper filmic look — no faffing about in the edit. One tap and your feed's giving cinema.",
+    price: "£4.99",
+    tag: "",
+    priceId: "price_1UDoth35QywjBrcAEqwvqG9K",
+    before: "/day-bundle.jpg",
   },
   {
-    name: "Preset Pack 1",
+    name: "Donsafari Night Bundle",
     description:
-      "Bring your warm pictures to life. Silky cinematic shine to make your photos pop. Edit like a boss.",
-    price: "£4",
+      "Night photography is tricky — streetlights turn everything orange, shadows crush to nothing, and grain can take over fast. This bundle is built to handle all of that.",
+    price: "£4.99",
     tag: "",
-    priceId: "price_1TeIde35QywjBrcAXQ4AYIOD",
-    before: "/p4.jpg",
-  },
-  {
-    name: "Donsafari Preset 2",
-    description:
-      "Feeling cyberpunk? Bring out the neons, darks and bright colours.",
-    price: "£4",
-    tag: "",
-    priceId: "price_1TeId735QywjBrcAS5PT8h3d",
-    before: "/l2.jpg",
-  },
-  {
-    name: "Donsafari Preset 3",
-    description:
-      "Classy with a little editorial grit. Make your photos fresh off film.",
-    price: "£4",
-    tag: "",
-    priceId: "price_1TeIa135QywjBrcAmnq5LoWp",
-    before: "/p1.jpg",
+    priceId: "price_1UDouy35QywjBrcATECEVsVC",
+    before: "/night-bundle.jpg",
   },
 ];
 
@@ -80,7 +62,7 @@ export default function Presets() {
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
         {presets.map((preset) => (
           <div
             key={preset.name}
